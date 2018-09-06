@@ -7,7 +7,7 @@ module Players
       #if board.valid_move?(meh)
       #  move = meh
       #end
-      move = minmax(board)
+      minmax(board)
     end
 
     #minmax theory. We play a max whenever possible against a min
@@ -27,18 +27,19 @@ module Players
       counter = []
 
       if board.valid_move?(5)
-        move = 5
+        attack = 5
         counter.push(100)
       else
         sampi_one = [2,4,5,8].sample
         if valid_move?(sampi_one)
-          move = sampi_one
+          attack = sampi_one
         else
           sampi_two = [1,3,7,9].sample
           valid_move?(sampi_two)
-          move = sampi_two
+          attack = sampi_two
         end
       end
+      attack
     end
 
   end
