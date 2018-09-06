@@ -18,9 +18,9 @@ module Players
     # then scan the board and place the next X in whichever row there are no Os
     # case 2) if position 5 is not available place in any adjacent cube to 5, so 2,4,5,8. leaing defense
     # then scan board and block O's move. use a counter to add value to each move. X is always first.
-    #at the moment do middle, then middle spaces, then corner. No logic to evaluate the board yet.
+    #at the moment do middle, then middle spaces, then corner. No logic to evaluate the board state yet.
 
-    def minmax(player_max)
+    def minmax(board)
       max =  1000
       min = -1000
       counter = []
