@@ -28,7 +28,6 @@ module Players
 
       if board.valid_move?("5")
         attack = "5"
-        #counter.push(100)
       else
         sampi_one = [2,4,5,8].sample
         if valid_move?(sampi_one)
@@ -39,7 +38,6 @@ module Players
           attack = sampi_two
         end
       end
-      #attack
     end
 
   end
