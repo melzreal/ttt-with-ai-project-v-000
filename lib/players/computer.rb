@@ -39,7 +39,7 @@ module Players
           attack = sampi_two
         end
       end
-      attack
+      
     end
 
   end
