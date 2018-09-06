@@ -38,8 +38,8 @@ module Players
           valid_move?(sampi_two)
           attack = sampi_two
         end
-      end
-
+      end  
+      attack
     end
 
   end
