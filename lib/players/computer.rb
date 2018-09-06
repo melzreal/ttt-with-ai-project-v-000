@@ -31,6 +31,10 @@ module Players
         sampi_one = [2,4,5,8].sample
         if valid_move?(sampi_one)
           move = sampi_one
+        else 
+          sampi_two = [1,3,7,9].sample
+          valid_move?(sampi_two)
+          move = sampi_two
         end
       end
     end
