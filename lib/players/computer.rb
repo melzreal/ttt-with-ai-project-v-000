@@ -7,7 +7,7 @@ module Players
       #if board.valid_move?(meh)
       #  move = meh
       #end
-      minmax(board)
+      move = minmax(board)
     end
 
     #minmax theory. We play a max whenever possible against a min
