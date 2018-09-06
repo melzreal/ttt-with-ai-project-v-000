@@ -30,11 +30,11 @@ module Players
         attack = "5"
       else
         sampi_one = [2,4,5,8].sample
-        if valid_move?(sampi_one)
+        if board.valid_move?(sampi_one)
           attack = sampi_one
         else
           sampi_two = [1,3,7,9].sample
-          valid_move?(sampi_two)
+          board.valid_move?(sampi_two)
           attack = sampi_two
         end
       end
