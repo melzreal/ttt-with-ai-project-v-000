@@ -2,11 +2,12 @@ module Players
   class Computer < Player
 
     def move(board)
-      range = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-      meh = range.sample
-      if board.valid_move?(meh)
-        move = meh
-      end
+      #range = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+      #meh = range.sample
+      #if board.valid_move?(meh)
+      #  move = meh
+      #end
+      minmax(board)
     end
 
     #minmax theory. We play a max whenever possible against a min
