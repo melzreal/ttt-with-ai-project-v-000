@@ -2,7 +2,7 @@ module Players
   class Computer < Player
 
     def move(board)
-      
+
       range = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
       meh = range.sample
       if board.valid_move?(meh)
@@ -21,16 +21,16 @@ module Players
     # then scan board and block O's move
 
     def minmax(player_max)
-    max =  1000 
-    min = -1000  
+    max =  1000
+    min = -1000
     if board.valid_move?(5)
-      move = 5 
-    else 
-      sampi = [2,4,5,8].sample 
-      if valid_move(sampi)
-        move = sampi 
-      end  
-    end 
+      move = 5
+    else
+      sampi = [2,4,5,8].sample
+      if valid_move?(sampi)
+        move = sampi
+      end
+    end
 
   end
 end
