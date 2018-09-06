@@ -10,7 +10,7 @@ module Players
     end
 
     #minmax theory. We play a max whenever possible against a min
-    #max would aim for center row if available, giving it the highest score
+    #max would aim for center row if available. That gets a +100 score on a counter
     #min always tries to block max
     #what arguments does it take? the board again, or the player to maximize?
     # our goal is to get the best possible score. A Loss is -1000 a win +1000
@@ -20,17 +20,18 @@ module Players
     # then scan board and block O's move. use a counter to add value to each move. X is always first.
 
     def minmax(player_max)
-    max =  1000
-    min = -1000
-    counter = []
+      max =  1000
+      min = -1000
+      counter = []
 
-    if board.valid_move?(5)
-      move = 5
-      counter.push(10)
-    else
-      sampi = [2,4,5,8].sample
-      if valid_move?(sampi)
-        move = sampi
+      if board.valid_move?(5)
+        move = 5
+        counter.push(100)
+      else
+        sampi = [2,4,5,8].sample
+        if valid_move?(sampi)
+          move = sampi
+        end
       end
     end
 
