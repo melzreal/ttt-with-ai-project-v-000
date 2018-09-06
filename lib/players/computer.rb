@@ -40,16 +40,16 @@ module Players
       end
     end
 
-    def score 
+    def score
       scores = []
       if draw?
         scores.push(1)
-      if winner == "X"
+      elsif winner == "X"
         scores.push(5)
-      elsif winner == "O"
+      else winner == "O"
         scores.push(-5)
-      end      
-    end 
+      end
+    end
 
   end
 end
