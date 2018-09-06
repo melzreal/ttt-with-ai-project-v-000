@@ -28,9 +28,9 @@ module Players
         move = 5
         counter.push(100)
       else
-        sampi = [2,4,5,8].sample
-        if valid_move?(sampi)
-          move = sampi
+        sampi_one = [2,4,5,8].sample
+        if valid_move?(sampi_one)
+          move = sampi_one
         end
       end
     end
